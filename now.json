@@ -1,8 +1,0 @@
-{
-  "env": {
-    "ipgeolocation_apikey": "@ipgeolocation_apikey"
-  },
-    "routes": [
-      { "src": "^/?[^/]*$", "dest": "/api/redirect.js" }
-  ]
-}
