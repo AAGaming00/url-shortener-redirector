@@ -41,7 +41,8 @@ const Redirect = async (userRequest, userResponse) => {
 
   if (redirectInfo.length != 1 || !redirectInfo[0].data.dest) {
     // Too much, not enough, or invalid data
-    userResponse.send("Not found");
+    userResponse.send(redirectRefs, redirectInfo);
+    return(1);
   } else {
     // Log the click
     const info = await getClickInfo(redirectInfo[0].data, userRequest);
