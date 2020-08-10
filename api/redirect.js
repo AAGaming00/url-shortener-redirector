@@ -35,7 +35,9 @@ const Redirect = async (userRequest, userResponse) => {
       });
       return client.query(getAllRedirectDataQuery);
     })
-    .catch(error => userResponse.send("Not found"));
+    .catch(error => {userResponse.send("Not found")
+    return(1);
+  });
 
   if (redirectInfo.length != 1 || !redirectInfo[0].data.dest) {
     // Too much, not enough, or invalid data
